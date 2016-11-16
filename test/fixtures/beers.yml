@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_organic: false
+  name: MyString
+  category: one
+  brewery: one
+
+two:
+  is_organic: false
+  name: MyString
+  category: two
+  brewery: two

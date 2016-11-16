@@ -1,0 +1,24 @@
+#current_user
+  %h1
+    = current_user.inspect
+  - if current_user
+    = button_to "Log Out", destroy_user_session_path, method: :delete
+  - else
+    = link_to "Log In", new_user_session_path
+    = link_to "Sign Up", new_user_registration_path
+
+%table
+  %tr
+    %th
+      Brewery
+    %th
+      Beers Count
+  - @breweries.each do |brewery|
+    %tr
+      %td
+        - if brewery.website
+          = link_to brewery.name, brewery.website
+        - else
+          = brewery.name
+      %td
+        = brewery.beers.count
